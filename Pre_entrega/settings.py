@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Pre_entrega.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Users/manuel/Desktop/Curso_python/Pre_entrega/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
