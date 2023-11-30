@@ -1,7 +1,7 @@
 # PRE_ENTREGA
 Este proyecto crea una página de reseñas de videojuegos, donde un usuario puede registrar un juego, y alguien más puede calificarlo o hacer comentarios al respecto.
 
-## Requisitos Previos
+# Requisitos Previos
 
 - Python 3.11
 - Django
@@ -12,7 +12,7 @@ Este proyecto crea una página de reseñas de videojuegos, donde un usuario pued
 - Ejecuta las migraciones: 'python manage.py migrate'
 - Inicia el servidor: 'python manage.py runserver'
 
-#Uso
+# Uso
 En la url blog/home se pueden ver todos los juegos que se han agregado para reseña, además se puede ingresar al juego para ver las opiniones y comentarios que ha tenido. 
 Luego, en la barra superior están todas las opciones disponibles:
   - Gamerpedia: te lleva al inicio de la página.
@@ -21,7 +21,7 @@ Luego, en la barra superior están todas las opciones disponibles:
   - Opinion: Permite agregar una calificación y opinión sobre un juego.
   - Comentario: permite comentar respecto al juego.
 
-#Estructura del proyecto
+# Estructura del proyecto
 Los directorios principales del proyecto son "Pre_entrega" donde se encuentra la base del proyecto y "blog" que es la aplicación donde se desarrolló el resto de contenido de la página. 
 En la carpeta templates se encuentra una sub-carpeta llamada base donde está el html correspondiente a la barra de navegación y pie de página.
 
