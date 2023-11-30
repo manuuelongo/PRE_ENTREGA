@@ -9,7 +9,7 @@ class GameForm(forms.ModelForm):
             'title': 'Título',
             'description': 'Descripción',
             'console': 'Consola',
-            'release_date': 'Fecha de lanzamiento',
+            'release_date': 'Fecha de lanzamiento ((mm/dd/aaaa)',
         }
     
 class BuscarGame(forms.Form):
@@ -33,5 +33,5 @@ class ComentarioForm(forms.ModelForm):
             'game': 'Juego',
             'autor_name': 'Tu nombre',
             'comentario': 'Agrega un comentario',
-            'date': 'Fecha'
+            'date': 'Fecha en la que lo jugaste (mm/dd/aaaa)'
         }
