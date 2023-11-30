@@ -1,0 +1,45 @@
+{% include "base/navbar.html" %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card mt-4" style="max-width: 600px;">
+            <div class="card-header text-center">
+                <h2>{{ game.title }}</h2>
+            </div>
+            <div class="card-body">
+                <p>{{ game.description }}</p>
+                <p>Consola: {{ game.console }}</p>
+                <p>Fecha de lanzamiento: {{ game.release_date }}</p>
+
+                {% if opiniones %}
+                    <h3>Opiniones:</h3>
+                    <ul>
+                        {% for opinion in opiniones %}
+                            <li>
+                                <strong>Rating:</strong> {{ opinion.rating }}<br>
+                                <strong>Opinión:</strong> {{ opinion.opinion|default:"No hay opinión disponible." }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No hay opiniones para este juego.</p>
+                {% endif %}
+
+                {% if comentarios %}
+                    <h3>Comentarios:</h3>
+                    <ul>
+                        {% for comentario in comentarios %}
+                            <li>
+                                <strong>Nombre:</strong> {{ comentario.autor_name }}<br>
+                                <strong>Comentario:</strong> {{ comentario.comentario|default:"No hay comentarios aún." }}<br>
+                                <strong>Fecha en la que lo jugó:</strong> {{ comentario.date }}<br>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No hay comentarios aún.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% include "base/footer.html" %}    

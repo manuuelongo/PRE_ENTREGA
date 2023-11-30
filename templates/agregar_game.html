@@ -1,7 +1,16 @@
 {% include "base/navbar.html" %}
-
-<form method="post" action="{% url 'agregar' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Guardar</button>
-</form>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card mt-4" style="max-width: 400px;">
+            <div class="card-header text-center">Agregar un juego</div>
+            <div class="card-body">
+                <form method="post" action="{% url 'agregar' %}" class="text-center">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "base/footer.html" %}    

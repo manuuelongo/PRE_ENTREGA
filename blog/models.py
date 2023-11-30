@@ -12,7 +12,6 @@ class Game(models.Model):
         ('PS5', 'PS5'),
         ('Sin Información', 'Sin Información')
     ]
-
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=350)
     console = models.CharField(max_length=20, choices=CONSOLE_CHOICES)
@@ -28,6 +27,7 @@ class Opinion(models.Model):
     opinion = models.TextField(max_length=300, null=True, blank=True)
 
 class Comentario(models.Model):
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)
     autor_name = models.CharField(max_length=100)
     comentario = models.CharField(max_length=150)
     date = models.DateField()

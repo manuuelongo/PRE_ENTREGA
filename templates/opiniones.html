@@ -1,0 +1,16 @@
+{% include "base/navbar.html" %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card mt-4" style="max-width: 400px;">
+            <div class="card-header text-center">Agregar opinión</div>
+            <div class="card-body">
+                <form method="post" action="{% url 'agregar_opinion' %}" class="text-center">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "base/footer.html" %}    
