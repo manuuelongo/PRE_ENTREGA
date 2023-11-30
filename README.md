@@ -3,7 +3,8 @@ Este proyecto crea una página de reseñas de videojuegos, donde un usuario pued
 
 ## Requisitos Previos
 
-Se debe tener instalado Python y Django.
+Python 3.11 
+Django
 
 # Uso
 Para ejecutar el proyecto en local solo es necesario ejectuar el comando python manage.py runserver.
